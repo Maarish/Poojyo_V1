@@ -38,10 +38,48 @@ export const SHEET_CSV_URLS: Record<SheetTab, string> = {
 export const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID ?? "";
 export const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? "";
 
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://poojyo.example.com").replace(
-  /\/$/,
-  ""
-);
+/** used until the real domain is configured; never a hard failure */
+const FALLBACK_SITE_URL = "https://poojyo.example.com";
+
+/**
+ * Canonical origin for `metadataBase`, OG image URLs, the sitemap and robots.
+ *
+ * Deliberately defensive, because this value is read at module scope in
+ * `app/layout.tsx` — anything it returns that `new URL()` rejects does not
+ * degrade a page, it fails the entire build before a single route is rendered.
+ * Two ways that used to happen, both of them ordinary dashboard mistakes:
+ *
+ *  - **The variable exists but is blank.** `??` only catches `undefined`, so an
+ *    env var added in a host's UI with an empty value sailed through and became
+ *    `new URL("")` -> ERR_INVALID_URL. This is the one that broke the first
+ *    Vercel deploy.
+ *  - **A bare domain.** `poojyo.com` with no scheme is not a valid URL either;
+ *    it is now upgraded to `https://` rather than rejected, since that is
+ *    unambiguously what was meant.
+ *
+ * Anything still unparseable falls back and says so in the build log, so the
+ * site ships with visibly wrong canonical URLs instead of not shipping at all.
+ */
+function resolveSiteUrl(): string {
+  let raw = (process.env.NEXT_PUBLIC_SITE_URL ?? "").trim();
+  if (!raw) return FALLBACK_SITE_URL;
+
+  if (!/^https?:\/\//i.test(raw)) raw = `https://${raw}`;
+
+  try {
+    return new URL(raw).toString().replace(/\/$/, "");
+  } catch {
+    // eslint-disable-next-line no-console
+    console.warn(
+      `[poojyo/config] NEXT_PUBLIC_SITE_URL is "${process.env.NEXT_PUBLIC_SITE_URL}", ` +
+        `which is not a usable URL. Falling back to ${FALLBACK_SITE_URL} — canonical, ` +
+        `OG and sitemap URLs will be wrong until this is fixed.`
+    );
+    return FALLBACK_SITE_URL;
+  }
+}
+
+export const SITE_URL = resolveSiteUrl();
 
 /** the canonical route for the landing page; `/` renders the same content */
 export const CANONICAL_PATH = "/ganpati";
