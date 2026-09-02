@@ -248,28 +248,6 @@
       "availability": "Pre-booking required"
     },
     {
-      "id": "mandap-backdrop",
-      "name": "Mandap & Backdrop",
-      "type": "mandap-backdrop",
-      "priceType": "quote",
-      "price": "",
-      "description": "Statement mandap and backdrop floral decoration, custom-designed for your celebration.",
-      "image": "/images/decor/mandap-1.jpg",
-      "images": [],
-      "availability": "Pre-booking required"
-    },
-    {
-      "id": "chowki-decor",
-      "name": "Chowki Decoration",
-      "type": "chowki",
-      "priceType": "starting",
-      "price": "₹2,499",
-      "description": "Elegant floral decoration for the chowki where Bappa is seated.",
-      "image": "/images/decor/chowki-1.jpg",
-      "images": [],
-      "availability": "Pre-booking required"
-    },
-    {
       "id": "door-entrance",
       "name": "Door & Entrance Flowers",
       "type": "door-entrance",
