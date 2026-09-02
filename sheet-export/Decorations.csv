@@ -1,0 +1,5 @@
+﻿id,name,type,priceType,price,description,image,images,availability
+home-decor,Home Ganpati Decoration,home,quote,,"Complete fresh-flower decoration for your home Ganpati setup, designed around your space.",/images/decor/home-1.jpg,,Pre-booking required
+mandap-backdrop,Mandap & Backdrop,mandap-backdrop,quote,,"Statement mandap and backdrop floral decoration, custom-designed for your celebration.",/images/decor/mandap-1.jpg,,Pre-booking required
+chowki-decor,Chowki Decoration,chowki,starting,"₹2,499",Elegant floral decoration for the chowki where Bappa is seated.,/images/decor/chowki-1.jpg,,Pre-booking required
+door-entrance,Door & Entrance Flowers,door-entrance,starting,"₹1,499",Welcome Bappa with a fresh floral toran and entrance decoration.,/images/decor/door-1.jpg,,Pre-booking required

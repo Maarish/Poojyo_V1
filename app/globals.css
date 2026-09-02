@@ -1,0 +1,347 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===========================================================================
+   DESIGN TOKENS — the single place to rebrand the site.
+   Colours are taken from the POOJYO logo's own palette block.
+   =========================================================================== */
+:root {
+  /* --- surfaces ------------------------------------------------------- */
+  --bg: #fbf7f0;           /* warm ivory page */
+  --surface: #ffffff;      /* cards, sticky bars */
+  --surface-sunk: #f5efe5; /* alternating bands, image slates */
+
+  /* --- ink -------------------------------------------------------------- */
+  --ink: #241c17;          /* headings + body */
+  --ink-muted: #6b5d53;    /* secondary copy */
+  --ink-subtle: #9a8b7e;   /* meta, captions */
+  --ink-inverse: #fdf8f4;  /* text on magenta */
+
+  /* --- structure -------------------------------------------------------- */
+  --line: #e8dfd2;
+  --line-strong: #d8cbb8;
+
+  /* --- brand ------------------------------------------------------------ */
+  --primary: #701a3d;       /* deep magenta — CTAs, active pill, section titles */
+  --primary-hover: #9e1b51; /* pink-magenta — hover + small accents */
+  --primary-soft: #f6ecf0;  /* tinted chip fill */
+  --gold: #c19a6b;          /* ★ rating, savings badge, logo ring — nothing else */
+  --gold-soft: #f7efe4;
+  --leaf: #3e5b45;          /* delivery / reassurance icons */
+  --whatsapp: #25d366;      /* glyph only, never a button fill */
+
+  /* --- shape ------------------------------------------------------------ */
+  --radius-sm: 0.5rem;   /* 8px  */
+  --radius-md: 0.75rem;  /* 12px */
+  --radius-lg: 1rem;     /* 16px */
+  --radius-xl: 1.5rem;   /* 24px */
+
+  /* --- depth: warm, low, never harsh black ------------------------------ */
+  --shadow-card: 0 1px 2px rgba(36, 28, 23, 0.04), 0 8px 24px -12px rgba(36, 28, 23, 0.1);
+  --shadow-raised: 0 2px 4px rgba(36, 28, 23, 0.05), 0 16px 40px -16px rgba(36, 28, 23, 0.14);
+  --shadow-bar: 0 -1px 0 var(--line), 0 -8px 24px -12px rgba(36, 28, 23, 0.12);
+  --shadow-header: 0 1px 0 var(--line), 0 8px 24px -16px rgba(36, 28, 23, 0.14);
+
+  /* --- type ------------------------------------------------------------- */
+  /* Secondary copy holds a 16px floor on mobile — descriptions, delivery
+     lines and availability all have to read without pinch-zoom. It relaxes to
+     14px from md up, where line length rather than legibility is the limit. */
+  --text-small: 1rem;
+  --text-small-lh: 1.6;
+  --text-label: 0.8125rem; /* uppercase eyebrows / kickers */
+
+  /* --- rhythm ----------------------------------------------------------- */
+  --gutter: 1.25rem;
+  --section-y: clamp(3.5rem, 9vw, 6rem);
+  --container: 70rem;   /* 1120px */
+  --header-h: 4rem;     /* 64px — inside the 60–80px brand spec */
+  --bar-h: 4.5rem;      /* 72px sticky bottom bar */
+
+  /* --- motion ----------------------------------------------------------- */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-press: 150ms;
+  --dur-reveal: 500ms;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 2rem;
+    --header-h: 4.75rem; /* 76px */
+    --text-small: 0.875rem;
+    --text-small-lh: 1.5;
+    --text-label: 0.75rem;
+  }
+}
+
+/* ===========================================================================
+   BASE
+   =========================================================================== */
+@layer base {
+  * {
+    border-color: var(--line);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans), system-ui, sans-serif;
+    font-size: 1rem; /* 16px floor on mobile — never smaller */
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+
+    /* The sticky bottom bar must never sit on top of real content. The bar is
+       --bar-h plus its 1px hairline plus the home-indicator inset; the extra
+       1rem is breathing room so the last line doesn't end flush against it. */
+    padding-bottom: calc(var(--bar-h) + 1px + env(safe-area-inset-bottom) + 1rem);
+  }
+
+  @media (min-width: 768px) {
+    body {
+      /* on desktop the bar is not fixed, so no reserved space is needed */
+      padding-bottom: 0;
+    }
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display), Georgia, serif;
+    font-weight: 600;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+
+  /* visible, branded focus ring everywhere */
+  :focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  /* respect the OS setting for anything that moves */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* ===========================================================================
+   COMPONENT PRIMITIVES
+   =========================================================================== */
+@layer components {
+  .container-page {
+    width: 100%;
+    max-width: var(--container);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+
+  /* Fixed bars run edge to edge, so in landscape on a notched phone they have
+     to clear the sensor housing themselves — the page gutter is measured from
+     the viewport edge, not from the safe area. */
+  .safe-x {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  /* every CTA clears the 48px tap-target floor */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 3rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.2;
+    transition: background-color var(--dur-press) var(--ease),
+      color var(--dur-press) var(--ease), transform var(--dur-press) var(--ease),
+      box-shadow var(--dur-press) var(--ease), border-color var(--dur-press) var(--ease);
+  }
+
+  .btn:active {
+    transform: scale(0.98);
+  }
+
+  /* Compact CTA — tighter type and padding, but it keeps the full 48px tap
+     height on touch. Only from md up, where there is a pointer, does it
+     actually get shorter. */
+  .btn-sm {
+    padding-inline: 1rem;
+    font-size: var(--text-small); /* still 16px on mobile, 14px from md up */
+  }
+
+  @media (min-width: 768px) {
+    .btn-sm {
+      min-height: 2.75rem;
+    }
+  }
+
+  .btn-primary {
+    background-color: var(--primary);
+    color: var(--ink-inverse);
+    box-shadow: var(--shadow-card);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--primary-hover);
+  }
+
+  .btn-secondary {
+    background-color: var(--surface);
+    color: var(--primary);
+    border: 1px solid var(--line-strong);
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--primary);
+    background-color: var(--primary-soft);
+  }
+
+  /* Ivory fill, magenta rule. Distinct from .btn-secondary, which is a white
+     card fill on a neutral rule: sitting directly on the ivory page, this one
+     reads as an outline *of the primary CTA* rather than as a raised surface,
+     which is what a paired second action wants. Gold stays out of it — a gold
+     button would make two competing fills out of a primary/secondary pair. */
+  .btn-outline {
+    background-color: var(--bg);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+  }
+
+  .btn-outline:hover {
+    background-color: var(--primary-soft);
+  }
+
+  .btn-ghost {
+    background-color: transparent;
+    color: var(--ink);
+    border: 1px solid var(--line-strong);
+  }
+
+  .btn-ghost:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+
+  .card {
+    background-color: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+  }
+
+  .eyebrow {
+    font-size: var(--text-label);
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--ink-subtle);
+  }
+
+  /* the gold ring that frames the stacked logo lockup */
+  .logo-ring {
+    display: grid;
+    place-items: center;
+    border-radius: 9999px;
+    border: 1px solid var(--gold);
+    background-color: var(--surface);
+    box-shadow: 0 0 0 6px rgba(193, 154, 107, 0.08), var(--shadow-card);
+  }
+
+  /* horizontal snap carousel on mobile, plain grid from md up */
+  .rail {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--gutter);
+    padding-inline: var(--gutter);
+    margin-inline: calc(var(--gutter) * -1);
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .rail::-webkit-scrollbar {
+    display: none;
+  }
+
+  .rail > * {
+    scroll-snap-align: start;
+    /* Percentage of the rail's *content* box, so at 375px a card is ~295px —
+       roughly 78vw, which is what the MediaFrame `sizes` hints. The next card
+       still peeks in by ~40px, which is what signals that the rail swipes. */
+    flex: 0 0 88%;
+    max-width: 20rem;
+  }
+
+  @media (min-width: 768px) {
+    .rail {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      overflow: visible;
+      padding-inline: 0;
+      margin-inline: 0;
+    }
+
+    .rail > * {
+      flex: initial;
+      max-width: none;
+    }
+  }
+}
+
+/* ===========================================================================
+   MOTION — opt-in, and only when the OS allows it
+   =========================================================================== */
+@layer utilities {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity var(--dur-reveal) var(--ease),
+        transform var(--dur-reveal) var(--ease);
+      transition-delay: var(--reveal-delay, 0ms);
+    }
+
+    .reveal[data-shown="true"] {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+}

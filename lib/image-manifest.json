@@ -1,0 +1,354 @@
+{
+  "files": [
+    {
+      "u": "/brand/logo-horizontal.png",
+      "v": "06025811",
+      "p": false
+    },
+    {
+      "u": "/brand/logo-stacked.png",
+      "v": "4374319c",
+      "p": false
+    },
+    {
+      "u": "/brand/lotus-icon.png",
+      "v": "3372fdaa",
+      "p": false
+    },
+    {
+      "u": "/brand/lotus-mark.png",
+      "v": "be3c0c6d",
+      "p": false
+    },
+    {
+      "u": "/brand/poojyo-logo.png",
+      "v": "36cdf448",
+      "p": false
+    },
+    {
+      "u": "/images/decor/chowki-1.jpg",
+      "v": "69896c98",
+      "p": true
+    },
+    {
+      "u": "/images/decor/door-1.jpg",
+      "v": "0c0e7513",
+      "p": false
+    },
+    {
+      "u": "/images/decor/home-1.jpg",
+      "v": "beb6cd32",
+      "p": false
+    },
+    {
+      "u": "/images/decor/mandap-1.jpg",
+      "v": "a7f75cc7",
+      "p": true
+    },
+    {
+      "u": "/images/essentials/agarbathi.jpg",
+      "v": "21d0aa19",
+      "p": false
+    },
+    {
+      "u": "/images/essentials/camphor.jpg",
+      "v": "479038df",
+      "p": false
+    },
+    {
+      "u": "/images/essentials/durva.jpg",
+      "v": "b9a788cf",
+      "p": false
+    },
+    {
+      "u": "/images/essentials/flowers.jpg",
+      "v": "161c7d7d",
+      "p": false
+    },
+    {
+      "u": "/images/essentials/haldi.jpg",
+      "v": "9517c742",
+      "p": false
+    },
+    {
+      "u": "/images/essentials/kumkum.jpg",
+      "v": "9167a168",
+      "p": false
+    },
+    {
+      "u": "/images/garlands/7.jpeg",
+      "v": "0d13b358",
+      "p": false
+    },
+    {
+      "u": "/images/garlands/custom-1.jpg",
+      "v": "31a32015",
+      "p": false
+    },
+    {
+      "u": "/images/garlands/custom-2.jpg",
+      "v": "af96e3cb",
+      "p": false
+    },
+    {
+      "u": "/images/garlands/custom-3.jpg",
+      "v": "c88dd1f0",
+      "p": false
+    },
+    {
+      "u": "/images/garlands/ganpati-1.jpeg",
+      "v": "a531d420",
+      "p": false
+    },
+    {
+      "u": "/images/garlands/ganpati-1.jpg",
+      "v": "38c8ec53",
+      "p": false
+    },
+    {
+      "u": "/images/garlands/ganpati-2.jpg",
+      "v": "89a2d2bb",
+      "p": false
+    },
+    {
+      "u": "/images/garlands/ganpati-3.jpg",
+      "v": "ada25260",
+      "p": false
+    },
+    {
+      "u": "/images/garlands/premium-1.jpg",
+      "v": "759cf52d",
+      "p": false
+    },
+    {
+      "u": "/images/garlands/premium-2.jpg",
+      "v": "5232fc51",
+      "p": false
+    },
+    {
+      "u": "/images/garlands/premium-3.jpg",
+      "v": "65ca72c5",
+      "p": false
+    },
+    {
+      "u": "/images/garlands/premium-4.jpg",
+      "v": "6e2e6906",
+      "p": false
+    },
+    {
+      "u": "/images/garlands/premium-5.jpg",
+      "v": "658aaf53",
+      "p": false
+    },
+    {
+      "u": "/images/garlands/premium-6.jpg",
+      "v": "f33777a2",
+      "p": false
+    },
+    {
+      "u": "/images/garlands/WhatsApp Image 2026-08-22 at 5.15.27 PM.jpeg",
+      "v": "c8557f71",
+      "p": false
+    },
+    {
+      "u": "/images/garlands/WhatsApp Image 2026-08-27 at 8.29.25 PM.jpeg",
+      "v": "32ba1260",
+      "p": false
+    },
+    {
+      "u": "/images/garlands/WhatsApp Image 2026-08-27 at 8.29.26 PM (1).jpeg",
+      "v": "da5471b3",
+      "p": false
+    },
+    {
+      "u": "/images/garlands/WhatsApp Image 2026-08-27 at 8.29.29 PM.jpeg",
+      "v": "80befadf",
+      "p": false
+    },
+    {
+      "u": "/images/garlands/WhatsApp Image 2026-08-27 at 8.29.30 PM.jpeg",
+      "v": "0d13b358",
+      "p": false
+    },
+    {
+      "u": "/images/garlands/WhatsApp Image 2026-08-27 at 8.29.31 PM.jpeg",
+      "v": "77be603a",
+      "p": false
+    },
+    {
+      "u": "/images/hero/hero-garland.jpg",
+      "v": "5232fc51",
+      "p": false
+    },
+    {
+      "u": "/images/hero/hero-garland1.jpg",
+      "v": "3e3590a1",
+      "p": false
+    },
+    {
+      "u": "/images/instagram/reel-1.jpg",
+      "v": "41a97cfa",
+      "p": true
+    },
+    {
+      "u": "/images/instagram/reel-2.jpg",
+      "v": "52ef1c0b",
+      "p": true
+    },
+    {
+      "u": "/images/instagram/reel-3.jpg",
+      "v": "6e21d769",
+      "p": true
+    },
+    {
+      "u": "/images/instagram/reel-4.jpg",
+      "v": "36c5fdcd",
+      "p": true
+    },
+    {
+      "u": "/images/mandal/mandal-garland-large.jpg",
+      "v": "c2dd6da5",
+      "p": false
+    },
+    {
+      "u": "/images/packages/7.jpeg",
+      "v": "0d13b358",
+      "p": false
+    },
+    {
+      "u": "/images/packages/custom-1.jpg",
+      "v": "31a32015",
+      "p": false
+    },
+    {
+      "u": "/images/packages/custom-3.jpg",
+      "v": "c88dd1f0",
+      "p": false
+    },
+    {
+      "u": "/images/packages/ganpati-2.jpg",
+      "v": "89a2d2bb",
+      "p": false
+    },
+    {
+      "u": "/images/packages/ganpati-3.jpg",
+      "v": "ada25260",
+      "p": false
+    },
+    {
+      "u": "/images/packages/pkg-1-5-1.jpg",
+      "v": "658aaf53",
+      "p": false
+    },
+    {
+      "u": "/images/packages/pkg-1-5-2.jpg",
+      "v": "759cf52d",
+      "p": false
+    },
+    {
+      "u": "/images/packages/pkg-1-5-3.jpg",
+      "v": "5232fc51",
+      "p": false
+    },
+    {
+      "u": "/images/packages/pkg-1-5.jpg",
+      "v": "6e2e6906",
+      "p": false
+    },
+    {
+      "u": "/images/packages/pkg-10-1.jpg",
+      "v": "31a32015",
+      "p": false
+    },
+    {
+      "u": "/images/packages/pkg-10-2.jpg",
+      "v": "89a2d2bb",
+      "p": false
+    },
+    {
+      "u": "/images/packages/pkg-10-3.jpg",
+      "v": "759cf52d",
+      "p": false
+    },
+    {
+      "u": "/images/packages/pkg-10.jpg",
+      "v": "5232fc51",
+      "p": false
+    },
+    {
+      "u": "/images/packages/pkg-3-1.jpg",
+      "v": "32ba1260",
+      "p": false
+    },
+    {
+      "u": "/images/packages/pkg-3-2.jpg",
+      "v": "da5471b3",
+      "p": false
+    },
+    {
+      "u": "/images/packages/pkg-3-3.jpg",
+      "v": "0d13b358",
+      "p": false
+    },
+    {
+      "u": "/images/packages/pkg-3.jpg",
+      "v": "c8557f71",
+      "p": false
+    },
+    {
+      "u": "/images/packages/pkg-5-1.jpg",
+      "v": "38c8ec53",
+      "p": false
+    },
+    {
+      "u": "/images/packages/pkg-5-2.jpg",
+      "v": "a531d420",
+      "p": false
+    },
+    {
+      "u": "/images/packages/pkg-5-3.jpg",
+      "v": "af96e3cb",
+      "p": false
+    },
+    {
+      "u": "/images/packages/pkg-5.jpg",
+      "v": "77be603a",
+      "p": false
+    },
+    {
+      "u": "/images/packages/pkg-7-1.jpg",
+      "v": "a531d420",
+      "p": false
+    },
+    {
+      "u": "/images/packages/pkg-7-2.jpg",
+      "v": "89a2d2bb",
+      "p": false
+    },
+    {
+      "u": "/images/packages/pkg-7-3.jpg",
+      "v": "af96e3cb",
+      "p": false
+    },
+    {
+      "u": "/images/packages/pkg-7.jpg",
+      "v": "6e2e6906",
+      "p": false
+    },
+    {
+      "u": "/images/packages/premium-3.jpg",
+      "v": "65ca72c5",
+      "p": false
+    },
+    {
+      "u": "/images/store/store-1.jpg",
+      "v": "699785f3",
+      "p": false
+    },
+    {
+      "u": "/images/store/store-2.jpg",
+      "v": "f4f86024",
+      "p": false
+    }
+  ]
+}

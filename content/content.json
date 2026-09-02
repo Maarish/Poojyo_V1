@@ -1,0 +1,299 @@
+{
+  "config": {
+    "brandName": "POOJYO",
+    "tagline": "Premium Ganpati Flower Garlands, delivered across Mumbai",
+    "heroSubtext": "Fresh, handcrafted garlands for your Ganpati at home",
+    "heroBadge": "Ganpati 2026 · Booking Open",
+    "heroVideo": "",
+    "heroVideoPoster": "",
+    "whatsappNumber": "919321481843",
+    "phoneNumber": "919321481843",
+    "googleRating": "",
+    "googleReviewCount": "",
+    "googleProfileUrl": "https://maps.app.goo.gl/u63WMexroJ4j5jk57",
+    "storeName": "POOJYO",
+    "storeAddress": "No. 94/A, Shell Colony Road, Sai Baba Nagar, Chembur, Mumbai, Maharashtra 400071",
+    "storeHours": "Mon–Sun, 9:00 AM – 9:30 PM",
+    "mapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.987274734572!2d72.8950794!3d19.064297099999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c94a9ed0e871%3A0x31a4734d592e706!2sPoojyo!5e0!3m2!1sen!2sin!4v1787237045669!5m2!1sen!2sin",
+    "getDirectionsUrl": "https://www.google.com/maps/dir//No+94%2FA,+Poojyo,+Shop,+Shell+Colony+Rd,+Sai+Baba+Nagar,+Kurla,+Mumbai,+Maharashtra+400071/@19.0642971,72.8925045,17z/data=!4m17!1m7!3m6!1s0x3be7c94a9ed0e871:0x31a4734d592e706!2sPoojyo!8m2!3d19.0642971!4d72.8950794!16s%2Fg%2F11zdhr2t3_!4m8!1m0!1m5!1m1!1s0x3be7c94a9ed0e871:0x31a4734d592e706!2m2!1d72.8950794!2d19.0642971!3e0?entry=ttu&g_ep=EgoyMDI2MDgxNy4wIKXMDSoASAFQAw%3D%3D",
+    "garlandBookingNotice": "Premium garlands — please book at least 1 day in advance",
+    "deliveryChembur": "Free delivery within Chembur on eligible package orders",
+    "deliveryMumbai": "Mumbai-wide delivery available. Charges may apply outside Chembur.",
+    "decorationDeadline": "12 September 2026",
+    "festivalBanner": ""
+  },
+  "garlands": [
+    {
+      "id": "premium-marigold",
+      "category": "premium",
+      "name": "Premium Ganpati Garland",
+      "description": "Handcrafted with fresh, hand-picked flowers for your Ganpati — rich, fragrant, and made to order for the festival.",
+      "image": "/images/garlands/premium-1.jpg",
+      "images": [],
+      "priceType": "fixed",
+      "price": "₹1,099",
+      "availability": "Made to order",
+      "featured": true,
+      "whatsappMessageOverride": ""
+    },
+    {
+      "id": "premium-rose",
+      "category": "premium",
+      "name": "Premium Rose Garland",
+      "description": "A lush garland of fresh roses, tied by hand for a premium, fragrant welcome to Bappa.",
+      "image": "/images/garlands/premium-2.jpg",
+      "images": [],
+      "priceType": "starting",
+      "price": "₹899",
+      "availability": "Made to order",
+      "featured": false,
+      "whatsappMessageOverride": ""
+    },
+    {
+      "id": "ganpati-classic",
+      "category": "ganpati",
+      "name": "Classic Ganpati Garland",
+      "description": "The traditional Ganpati garland in fresh seasonal flowers — a timeless choice for daily pooja.",
+      "image": "/images/garlands/ganpati-1.jpg",
+      "images": [],
+      "priceType": "fixed",
+      "price": "₹699",
+      "availability": "Made to order",
+      "featured": false,
+      "whatsappMessageOverride": ""
+    },
+    {
+      "id": "ganpati-mogra",
+      "category": "ganpati",
+      "name": "Mogra Ganpati Garland",
+      "description": "Delicate, fragrant mogra strung fresh — a beautiful seasonal offering, subject to availability.",
+      "image": "/images/garlands/ganpati-2.jpg",
+      "images": [],
+      "priceType": "starting",
+      "price": "₹799",
+      "availability": "Seasonal — subject to availability",
+      "featured": false,
+      "whatsappMessageOverride": ""
+    },
+    {
+      "id": "custom-garland",
+      "category": "custom",
+      "name": "Custom Garland",
+      "description": "Tell us your flowers, colours, and length — we'll craft a custom garland just for your Ganpati.",
+      "image": "/images/garlands/custom-1.jpg",
+      "images": [],
+      "priceType": "quote",
+      "price": "",
+      "availability": "Made to order",
+      "featured": false,
+      "whatsappMessageOverride": ""
+    }
+  ],
+  "packages": [
+    {
+      "id": "pkg-1-5",
+      "durationLabel": "1.5 Days",
+      "durationDays": 1.5,
+      "garlandCount": "2 garlands",
+      "image": "/images/packages/pkg-1-5.jpg",
+      "images": [
+        "/images/packages/pkg-1-5.jpg",
+        "/images/packages/pkg-1-5-1.jpg",
+        "/images/packages/pkg-1-5-2.jpg",
+        "/images/packages/pkg-1-5-3.jpg"
+      ],
+      "regularTotal": "₹1,998",
+      "packagePrice": "₹1,799",
+      "savingsText": "You save ₹199",
+      "eligibilityText": "Eligible for free delivery within Chembur",
+      "deliveryBenefit": "Free delivery within Chembur",
+      "availability": "Made to order",
+      "featured": false
+    },
+    {
+      "id": "pkg-3",
+      "durationLabel": "3 Days",
+      "durationDays": 3,
+      "garlandCount": "3 garlands",
+      "image": "/images/packages/pkg-3.jpg",
+      "images": [
+        "/images/packages/pkg-3.jpg",
+        "/images/packages/pkg-3-1.jpg",
+        "/images/packages/pkg-3-2.jpg",
+        "/images/packages/pkg-3-3.jpg"
+      ],
+      "regularTotal": "₹2,997",
+      "packagePrice": "₹2,699",
+      "savingsText": "You save ₹298",
+      "eligibilityText": "Eligible for free delivery within Chembur",
+      "deliveryBenefit": "Free delivery within Chembur",
+      "availability": "Made to order",
+      "featured": false
+    },
+    {
+      "id": "pkg-5",
+      "durationLabel": "5 Days",
+      "durationDays": 5,
+      "garlandCount": "5 garlands",
+      "image": "/images/packages/pkg-5.jpg",
+      "images": [
+        "/images/packages/pkg-5.jpg",
+        "/images/packages/pkg-5-1.jpg",
+        "/images/packages/pkg-5-2.jpg",
+        "/images/packages/pkg-5-3.jpg"
+      ],
+      "regularTotal": "₹4,995",
+      "packagePrice": "₹4,499",
+      "savingsText": "You save ₹496",
+      "eligibilityText": "Eligible for free delivery within Chembur",
+      "deliveryBenefit": "Free delivery within Chembur",
+      "availability": "Made to order",
+      "featured": true
+    },
+    {
+      "id": "pkg-7",
+      "durationLabel": "7 Days",
+      "durationDays": 7,
+      "garlandCount": "7 garlands",
+      "image": "/images/packages/pkg-7.jpg",
+      "images": [
+        "/images/packages/pkg-7.jpg",
+        "/images/packages/pkg-7-1.jpg",
+        "/images/packages/pkg-7-2.jpg",
+        "/images/packages/pkg-7-3.jpg"
+      ],
+      "regularTotal": "₹6,993",
+      "packagePrice": "₹6,199",
+      "savingsText": "You save ₹794",
+      "eligibilityText": "Eligible for free delivery within Chembur",
+      "deliveryBenefit": "Free delivery within Chembur",
+      "availability": "Made to order",
+      "featured": false
+    },
+    {
+      "id": "pkg-10",
+      "durationLabel": "10 Days",
+      "durationDays": 10,
+      "garlandCount": "10 garlands",
+      "image": "/images/packages/pkg-10.jpg",
+      "images": [
+        "/images/packages/pkg-10.jpg",
+        "/images/packages/pkg-10-1.jpg",
+        "/images/packages/pkg-10-2.jpg",
+        "/images/packages/pkg-10-3.jpg"
+      ],
+      "regularTotal": "₹9,990",
+      "packagePrice": "₹8,799",
+      "savingsText": "You save ₹1,191",
+      "eligibilityText": "Eligible for free delivery within Chembur",
+      "deliveryBenefit": "Free delivery within Chembur",
+      "availability": "Made to order",
+      "featured": false
+    }
+  ],
+  "poojaEssentials": [
+    {
+      "id": "durva",
+      "name": "Durva",
+      "price": "",
+      "image": "/images/essentials/durva.jpg",
+      "note": ""
+    },
+    {
+      "id": "flowers",
+      "name": "Loose Flowers",
+      "price": "",
+      "image": "/images/essentials/flowers.jpg",
+      "note": ""
+    },
+    {
+      "id": "kumkum",
+      "name": "Kumkum",
+      "price": "",
+      "image": "/images/essentials/kumkum.jpg",
+      "note": ""
+    },
+    {
+      "id": "camphor",
+      "name": "Camphor",
+      "price": "",
+      "image": "/images/essentials/camphor.jpg",
+      "note": ""
+    },
+    {
+      "id": "agarbathi",
+      "name": "Agarbathi",
+      "price": "",
+      "image": "/images/essentials/agarbathi.jpg",
+      "note": ""
+    },
+    {
+      "id": "haldi",
+      "name": "Haldi",
+      "price": "",
+      "image": "/images/essentials/haldi.jpg",
+      "note": ""
+    }
+  ],
+  "decorations": [
+    {
+      "id": "home-decor",
+      "name": "Home Ganpati Decoration",
+      "type": "home",
+      "priceType": "quote",
+      "price": "",
+      "description": "Complete fresh-flower decoration for your home Ganpati setup, designed around your space.",
+      "image": "/images/decor/home-1.jpg",
+      "images": [],
+      "availability": "Pre-booking required"
+    },
+    {
+      "id": "mandap-backdrop",
+      "name": "Mandap & Backdrop",
+      "type": "mandap-backdrop",
+      "priceType": "quote",
+      "price": "",
+      "description": "Statement mandap and backdrop floral decoration, custom-designed for your celebration.",
+      "image": "/images/decor/mandap-1.jpg",
+      "images": [],
+      "availability": "Pre-booking required"
+    },
+    {
+      "id": "chowki-decor",
+      "name": "Chowki Decoration",
+      "type": "chowki",
+      "priceType": "starting",
+      "price": "₹2,499",
+      "description": "Elegant floral decoration for the chowki where Bappa is seated.",
+      "image": "/images/decor/chowki-1.jpg",
+      "images": [],
+      "availability": "Pre-booking required"
+    },
+    {
+      "id": "door-entrance",
+      "name": "Door & Entrance Flowers",
+      "type": "door-entrance",
+      "priceType": "starting",
+      "price": "₹1,499",
+      "description": "Welcome Bappa with a fresh floral toran and entrance decoration.",
+      "image": "/images/decor/door-1.jpg",
+      "images": [],
+      "availability": "Pre-booking required"
+    }
+  ],
+  "mandalBulk": {
+    "enabled": true,
+    "ctaLabel": "For Ganpati Mandals & Sarvajanik / Society Ganpati",
+    "blurb": "Putting up one big Ganpati for your mandal, building or society? We supply the large garlands, the bulk pooja essentials and the decoration together — one order, one coordinator, one delivery.",
+    "whatsappMessage": "Hi POOJYO 🙏 We'd like a quote for a community Ganpati order.\nMandal / Society name: ______\nType (mandal / sarvajanik society): ______\nNumber of garlands needed: ______\nBulk pooja items needed: ______\nDecoration required? (yes/no): ______\nArea/Pincode: ______\nGanpati start date: ______\nDuration (number of days): ______\nPlease share options, bulk pricing & delivery plan.",
+    "images": [
+      "/images/mandal/mandal-garland-large.jpg"
+    ]
+  },
+  "instagram": {
+    "enabled": true,
+    "handle": "poojyo_in",
+    "profileUrl": "https://instagram.com/poojyo_in"
+  },
+  "reviews": []
+}

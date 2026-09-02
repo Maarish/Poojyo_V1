@@ -1,0 +1,6 @@
+﻿id,category,name,description,image,images,priceType,price,availability,featured,whatsappMessageOverride
+premium-marigold,premium,Premium Ganpati Garland,"Handcrafted with fresh, hand-picked flowers for your Ganpati — rich, fragrant, and made to order for the festival.",/images/garlands/premium-1.jpg,,fixed,"₹1,099",Made to order,TRUE,
+premium-rose,premium,Premium Rose Garland,"A lush garland of fresh roses, tied by hand for a premium, fragrant welcome to Bappa.",/images/garlands/premium-2.jpg,,starting,₹899,Made to order,FALSE,
+ganpati-classic,ganpati,Classic Ganpati Garland,The traditional Ganpati garland in fresh seasonal flowers — a timeless choice for daily pooja.,/images/garlands/ganpati-1.jpg,,fixed,₹699,Made to order,FALSE,
+ganpati-mogra,ganpati,Mogra Ganpati Garland,"Delicate, fragrant mogra strung fresh — a beautiful seasonal offering, subject to availability.",/images/garlands/ganpati-2.jpg,,starting,₹799,Seasonal — subject to availability,FALSE,
+custom-garland,custom,Custom Garland,"Tell us your flowers, colours, and length — we'll craft a custom garland just for your Ganpati.",/images/garlands/custom-1.jpg,,quote,,Made to order,FALSE,
