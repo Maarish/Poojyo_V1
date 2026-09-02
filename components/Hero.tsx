@@ -64,7 +64,13 @@ export function Hero({ content }: { content: NormalizedContent }) {
         {/* `immediate` on every row: the hero is the one thing on the page that
             is always above the fold, so it must not wait for hydration to
             become visible — see the prop's note in Reveal. */}
-        <div className="mx-auto flex min-h-[calc(100svh-var(--header-h))] max-w-2xl flex-col items-center pb-5 pt-3 text-center md:min-h-0 md:pb-0 md:pt-12">
+        {/*
+          Padding is kept deliberately tight on mobile. Every pixel spent here
+          is a pixel taken off the film: the column is pinned to the viewport,
+          the text rows are all `shrink-0`, so the video is whatever is left.
+          `md:` restores normal breathing room, where there is no such contest.
+        */}
+        <div className="mx-auto flex min-h-[calc(100svh-var(--header-h))] max-w-2xl flex-col items-center pb-3 pt-2 text-center md:min-h-0 md:pb-0 md:pt-12">
           {badge && (
             <Reveal immediate className="shrink-0">
               <p className="inline-flex items-center gap-2 rounded-full border border-gold/45 bg-gold-soft px-3.5 py-1.5 text-label font-semibold text-primary">
@@ -81,7 +87,7 @@ export function Hero({ content }: { content: NormalizedContent }) {
               in landscape below md, where the leftover space goes negative. At
               7rem the column simply grows past 100svh instead, which is the
               right trade: a scroll beats a disappeared hero. */}
-          <div className="flex w-full min-h-[7rem] flex-1 items-stretch justify-center py-4 md:min-h-0 md:flex-none md:py-0 md:items-center">
+          <div className="flex w-full min-h-[7rem] flex-1 items-stretch justify-center py-2 md:min-h-0 md:flex-none md:py-0 md:items-center">
             {/*
               `items-stretch` above and no `h-full` here, and that pairing is
               load-bearing rather than stylistic.
@@ -117,7 +123,7 @@ export function Hero({ content }: { content: NormalizedContent }) {
 
           {config.heroSubtext && (
             <Reveal immediate className="shrink-0">
-              <p className="mt-3 max-w-prose text-lead text-ink-muted md:mt-4">
+              <p className="mt-2.5 max-w-prose text-lead text-ink-muted md:mt-4">
                 {config.heroSubtext}
               </p>
             </Reveal>
@@ -125,7 +131,7 @@ export function Hero({ content }: { content: NormalizedContent }) {
 
           {featuredGarland && featuredGarland.priceType !== "quote" && (
             <Reveal immediate className="shrink-0">
-              <div className="mt-4 flex flex-wrap items-baseline justify-center gap-x-3 gap-y-1">
+              <div className="mt-3 flex flex-wrap items-baseline justify-center gap-x-3 gap-y-1 md:mt-4">
                 <span className="text-small text-ink-subtle">{featuredGarland.name}</span>
                 <PriceTag
                   priceType={featuredGarland.priceType}
@@ -140,7 +146,7 @@ export function Hero({ content }: { content: NormalizedContent }) {
               things the whole page exists for, and a side-by-side pair would
               halve both tap targets to make room for each other. */}
           <Reveal immediate className="w-full shrink-0">
-            <div className="mx-auto mt-5 flex w-full max-w-sm flex-col gap-2.5 md:mt-7 md:gap-3">
+            <div className="mx-auto mt-4 flex w-full max-w-sm flex-col gap-2.5 md:mt-7 md:gap-3">
               <WhatsAppButton
                 whatsappNumber={config.whatsappNumber}
                 context={{ kind: "generic" }}

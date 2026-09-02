@@ -39,7 +39,7 @@ export const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID ?? "";
 export const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? "";
 
 /** used until the real domain is configured; never a hard failure */
-const FALLBACK_SITE_URL = "https://poojyo.example.com";
+const FALLBACK_SITE_URL = "https://poojyo.in";
 
 /**
  * Canonical origin for `metadataBase`, OG image URLs, the sitemap and robots.

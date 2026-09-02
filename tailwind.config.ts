@@ -57,12 +57,18 @@ const config: Config = {
         h3: ["1.25rem", { lineHeight: "1.3", letterSpacing: "-0.01em" }],
         price: ["1.5rem", { lineHeight: "1.2", letterSpacing: "-0.01em" }],
         h2: ["clamp(1.75rem, 5.5vw, 2.5rem)", { lineHeight: "1.15", letterSpacing: "-0.02em" }],
-        // Used by exactly one element, the hero h1. The mobile floor is 30px
-        // rather than 34px because the hero now guarantees both CTAs above the
-        // fold on a 375px screen, and this headline is the largest single claim
-        // on that budget — 4px a line buys ~16px back for the video without
-        // costing the headline any of its authority. Desktop is unchanged.
-        display: ["clamp(1.875rem, 6.8vw, 3.5rem)", { lineHeight: "1.08", letterSpacing: "-0.022em" }],
+        // Used by exactly one element, the hero h1 — so this clamp is really a
+        // hero setting, not a scale step.
+        //
+        // The mobile floor is 28px rather than the original 34px, and the line
+        // height is tight. Both are bought deliberately: the hero pins itself
+        // to the viewport and hands the leftover space to the video, so on a
+        // 375x667 screen this headline and the film are in direct competition
+        // for the same pixels. Four lines at 34px/1.06 is 144px; at 28px/1.02
+        // it is 114px, and those 30px go straight into the video with the
+        // headline still the largest thing on the page. Desktop is untouched —
+        // the clamp only bites below ~410px.
+        display: ["clamp(1.75rem, 6.6vw, 3.5rem)", { lineHeight: "1.02", letterSpacing: "-0.022em" }],
       },
       borderRadius: {
         sm: "var(--radius-sm)",
