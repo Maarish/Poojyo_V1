@@ -97,6 +97,15 @@ export const ConfigSchema = z.object({
   tagline: optStr,
   heroSubtext: optStr,
   /**
+   * The phone-sized version of `heroSubtext`, kept to a single line.
+   *
+   * The hero is a fixed vertical budget on mobile — the film gets whatever the
+   * text does not take — and the full subtext wraps to two tall lines. This one
+   * says the same thing in one. Blank falls back to the shipped default, so the
+   * sheet only needs this row to change it.
+   */
+  heroSubtextShort: optStr,
+  /**
    * The seasonal line in the hero's pill badge, e.g.
    * "Ganpati 2026 · Booking Open". Blank falls back to `festivalBanner`, so a
    * sheet that only ever used that row still gets one seasonal line rather than

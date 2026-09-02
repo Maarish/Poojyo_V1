@@ -19,6 +19,9 @@ import { LeafGlyph, TruckGlyph } from "./icons";
 const HERO_VIDEO = "/video/hero-garland.mp4";
 const HERO_POSTER = "/images/hero/hero-garland.jpg";
 
+/** the one-line mobile subtext, when the Config tab does not set its own */
+const HERO_SUBTEXT_SHORT = "Fresh. Handcrafted. Delivered.";
+
 /**
  * One centred column, mobile-first: seasonal pill, film, serif headline,
  * subtext, price, then both CTAs — all of it above the fold on a phone.
@@ -54,6 +57,7 @@ export function Hero({ content }: { content: NormalizedContent }) {
   // One seasonal line, never two: the pill is the only place it renders now, so
   // a sheet that has only ever filled in `festivalBanner` still gets a badge.
   const badge = config.heroBadge || config.festivalBanner;
+  const shortSubtext = config.heroSubtextShort || HERO_SUBTEXT_SHORT;
 
   const videoSrc = resolveVideo(config.heroVideo || HERO_VIDEO);
   const posterSrc = resolveImage(config.heroVideoPoster || HERO_POSTER);
@@ -73,7 +77,7 @@ export function Hero({ content }: { content: NormalizedContent }) {
         <div className="mx-auto flex min-h-[calc(100svh-var(--header-h))] max-w-2xl flex-col items-center pb-3 pt-2 text-center md:min-h-0 md:pb-0 md:pt-12">
           {badge && (
             <Reveal immediate className="shrink-0">
-              <p className="inline-flex items-center gap-2 rounded-full border border-gold/45 bg-gold-soft px-3.5 py-1.5 text-label font-semibold text-primary">
+              <p className="inline-flex items-center gap-2 rounded-full border border-gold/45 bg-gold-soft px-3.5 py-1 text-label font-semibold text-primary md:py-1.5">
                 <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-primary" />
                 {badge}
               </p>
@@ -112,7 +116,12 @@ export function Hero({ content }: { content: NormalizedContent }) {
                 alt="A POOJYO premium fresh Ganpati flower garland"
                 sizes="(min-width: 768px) 320px, 60vw"
                 priority
-                className="aspect-[4/5] h-full w-auto max-w-full md:aspect-auto md:h-auto md:w-[20rem]"
+                // The height cap is what stops a tall phone from deriving a
+                // frame wider than the page gutter allows: at 4:5 a width of
+                // (100vw - gutters) corresponds to 1.25x that in height, and
+                // past it `max-w-full` would clamp the width while the height
+                // stayed put, quietly breaking the ratio.
+                className="aspect-[4/5] h-full w-auto max-h-[calc((100vw-2.5rem)*1.25)] max-w-full md:aspect-auto md:h-auto md:max-h-none md:w-[20rem]"
               />
             </Reveal>
           </div>
@@ -123,7 +132,21 @@ export function Hero({ content }: { content: NormalizedContent }) {
 
           {config.heroSubtext && (
             <Reveal immediate className="shrink-0">
-              <p className="mt-2.5 max-w-prose text-lead text-ink-muted md:mt-4">
+              {/*
+                Two lengths of the same line, one per breakpoint.
+
+                On a phone the hero is a fixed vertical budget — the film gets
+                whatever the text does not take — and the full subtext wraps to
+                two tall lines, ~60px. The short form says it in one, for ~34px.
+                From `md` up there is no contest, so the full sentence renders
+                exactly as before.
+
+                Two elements rather than one with swapped text: the value comes
+                from the content source, and picking between them in JSX keeps
+                both editable from the sheet with no client-side measuring.
+              */}
+              <p className="mt-2 text-body text-ink-muted md:hidden">{shortSubtext}</p>
+              <p className="mt-2 hidden max-w-prose text-body text-ink-muted md:mt-4 md:block md:text-lead">
                 {config.heroSubtext}
               </p>
             </Reveal>
@@ -131,12 +154,22 @@ export function Hero({ content }: { content: NormalizedContent }) {
 
           {featuredGarland && featuredGarland.priceType !== "quote" && (
             <Reveal immediate className="shrink-0">
-              <div className="mt-3 flex flex-wrap items-baseline justify-center gap-x-3 gap-y-1 md:mt-4">
+              {/* One compact line on a phone — `md` price size rather than
+                  `lg`, and no wrapping. The number still reads as the largest
+                  thing in the row without costing the film another 14px. */}
+              <div className="mt-2.5 flex flex-wrap items-baseline justify-center gap-x-2.5 gap-y-1 md:mt-4 md:gap-x-3">
                 <span className="text-small text-ink-subtle">{featuredGarland.name}</span>
                 <PriceTag
                   priceType={featuredGarland.priceType}
                   price={featuredGarland.price}
+                  size="md"
+                  className="md:hidden"
+                />
+                <PriceTag
+                  priceType={featuredGarland.priceType}
+                  price={featuredGarland.price}
                   size="lg"
+                  className="hidden md:inline-flex"
                 />
               </div>
             </Reveal>
